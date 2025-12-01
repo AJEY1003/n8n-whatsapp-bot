@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-whatsapp
+    name: n8n-whatsapp-bot
     env: docker
     plan: free
     autoDeploy: true
@@ -9,10 +9,10 @@ services:
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
-        value: 5678
+        value: "5678"
       - key: N8N_PROTOCOL
         value: https
-      - key: NODE_ENV
-        value: production
       - key: GENERIC_TIMEZONE
         value: Asia/Kolkata
+      - key: WEBHOOK_URL
+        sync: false
